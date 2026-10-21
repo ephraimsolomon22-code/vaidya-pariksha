@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+body { background: theme('colors.paper'); color: theme('colors.ink'); font-family: theme('fontFamily.sans'); }
+* { transition: background-color .15s ease, border-color .15s ease, box-shadow .15s ease, transform .15s ease; }
+
+.card { @apply bg-panel border border-line rounded-xl2 p-5 shadow-card; }
+.btn { @apply bg-teal text-white rounded-lg px-4 py-2 text-sm font-medium hover:bg-teal-dark active:scale-[0.98]; }
+.btn-ghost { @apply border border-line rounded-lg px-4 py-2 text-sm font-medium hover:bg-[#efe9d9]; }
+
+table { @apply w-full border-collapse text-sm; }
+th { @apply text-left text-muted font-semibold text-xs uppercase tracking-wide py-2.5 px-3 border-b border-line bg-[#faf8f2]; }
+td { @apply py-2.5 px-3 border-b border-[#eee9db]; }
+tbody tr:hover td { @apply bg-teal-light; }
+tbody tr:last-child td { border-bottom: none; }
+
+.pill { @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold; }
+.pill::before { content: ''; width: 6px; height: 6px; border-radius: 999px; background: currentColor; }
+.pill-red { @apply bg-[#f8e0e0] text-red; }
+.pill-amber { @apply bg-[#f8ecd4] text-amber; }
+.pill-green { @apply bg-[#dcf0e2] text-[#1f6b3a]; }
+.pill-grey { @apply bg-[#ece7d9] text-muted; }
+
+input, select { outline: none; }
+input:focus, select:focus { @apply ring-2 ring-teal/30 border-teal; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #d8d2bf; border-radius: 8px; }
